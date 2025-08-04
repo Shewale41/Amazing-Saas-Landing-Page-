@@ -8,7 +8,8 @@ export const Header = () => {
   return (
   <>
   {/* //this will be the sticky header  */}
-    <header className="sticky top-0">
+  {/* //backdrop blur is used to make the header ya navbar transparent */}
+    <header className="sticky top-0 backdrop-blur-sm "> 
       {/* //super header the uppermost black header */}
         <div className="flex items-center justify-center bg-black text-white text-sm gap-3">
           {/* //mobile yeh hidden rahgea yaad rakhna */}
