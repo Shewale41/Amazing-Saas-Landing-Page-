@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 /* //making our components */
+/* pro-tip whenever you make a utility component just dont take pre margins as for each component the margin requirements are different */
+/* in simple words never include the margins or paddings in utility */
 
 @layer components {
+
     .btn{
         @apply bg-black text-white px-4 py-2 inline-flex font-medium rounded-lg items-center justify-center tracking-tight;
     }
@@ -25,5 +28,13 @@
         @apply inline-flex px-3 py-1 text-sm rounded-lg tracking-tight;
         border: 1px solid rgba(34, 34, 34, 0.1); /* #222 with 10% opacity */
       }
+
+    .section-title {
+        @apply text-center  text-3xl md:text-[54px] md:leading-[60px] tracking-tighter bg-gradient-to-b from-black to-[#001E80] bg-clip-text;
+    }  
       
+    .section-description {
+        @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+    }
+    
 }

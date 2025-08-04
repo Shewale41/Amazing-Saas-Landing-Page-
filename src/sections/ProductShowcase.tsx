@@ -14,8 +14,8 @@ export const ProductShowcase = () => {
         Boost your productivity
       </div>
       </div>
-      <h2 className="text-center  text-3xl md:text-[54px] md:leading-[60px] tracking-tighter bg-gradient-to-b from-black to-[#001E80] bg-clip-text mt-5 ">A more effective way to track progress</h2>
-      <p className="text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E] mt-5 ">
+      <h2 className="section-title mt-5 ">A more effective way to track progress</h2>
+      <p className="section-description mt-5 ">
         Effortlessly turn your ideas into fully functional,responsive,SaaS 
         website in just minutes with this template. 
       </p>
