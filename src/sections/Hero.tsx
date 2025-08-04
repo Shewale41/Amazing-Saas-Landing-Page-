@@ -1,4 +1,4 @@
-
+import ArrowRight from "@/assets/arrow-right.svg";
 
 export const Hero = () => {
   return (
@@ -14,7 +14,10 @@ export const Hero = () => {
               </p>
               <div className="flex items-center mt-[30px] gap-1 ">
                 <button className="btn btn-primary ">Get Started for Free</button>
-                <button className="btn">Learn More</button>
+                <button className="btn btn-text gap-1">
+                  <span>Learn More</span>
+                  <ArrowRight ClassName="h-4 w-4"/>
+                    </button>
               </div>
             </div>
           </div>

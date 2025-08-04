@@ -14,6 +14,6 @@
     }
 
     .btn-text{
-        @apply text-black bg-transparent
+        @apply text-black bg-transparent;
     }
 }
