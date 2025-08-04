@@ -12,7 +12,7 @@ export const Hero = () => {
             {/* //in medium device it should be on left the cog image */}
             <div className="md:flex items-center">
             <div className="md:w-[476px] "  >
-              <div className="inline-flex border border-black-[#222]/10 px-3 py-1 text-sm rounded-lg ">Version 2.0 is finally Here</div>
+              <div className="tag">Version 2.0 is finally Here</div>
               {/* //making gradient text */}
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 ">PathWay To productivity</h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">

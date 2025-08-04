@@ -18,6 +18,12 @@
     }
 
     .logo-ticker-image{
-        @apply h-8 w-auto
+        @apply h-8 w-auto;
     }
+
+    .tag {
+        @apply inline-flex px-3 py-1 text-sm rounded-lg tracking-tight;
+        border: 1px solid rgba(34, 34, 34, 0.1); /* #222 with 10% opacity */
+      }
+      
 }
