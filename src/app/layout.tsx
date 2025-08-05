@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
+//yeh sirf apna analytics ke liye hai
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import clsx from "clsx";
