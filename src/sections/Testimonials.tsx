@@ -73,6 +73,8 @@ const firstColumn = testimonials.slice(0,3);
 const secondColumn = testimonials.slice(3,6);
 const thirdColumn = testimonials.slice(6,9);
 
+
+//this is a re-usable components so we dont have to write a ton of same code over n over
 const TestimonialColumn = (props : { className?:string; 
                                      testimonials: typeof testimonials;
                                      } )=>(
