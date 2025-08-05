@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Logo from "@/assets/logosaas.png";
-import socialInsta from "@/assets/social-insta.svg";
-import socialX from "@/assets/social-x.svg";
-import socialLinkedin from "@/assets/social-linkedin.svg";
-import socialPin from "@/assets/social-pin.svg"
-import socialYoutube from "@/assets/social-youtube.svg"
+import SocialInsta from "@/assets/social-insta.svg";
+import SocialX from "@/assets/social-x.svg";
+import SocialLinkedin from "@/assets/social-linkedin.svg";
+import SocialPin from "@/assets/social-pin.svg"
+import SocialYoutube from "@/assets/social-youtube.svg"
 
 
 export const Footer = () => {
@@ -21,13 +21,13 @@ export const Footer = () => {
           <a href="#">Careers</a>
         </nav>
         <div>
-          <socialX />
-          <socialInsta />
-          <socialLinkedin />
-          <socialYoutube />
-          <socialPin />
+          <SocialX />
+          <SocialInsta />
+          <SocialLinkedin />
+          <SocialYoutube />
+          <SocialPin />
         </div>
-        <p>&copy; 2025 @ Gopal Shewale , Inc .All rights reserved </p>
+        <p>&copy; 2025 @ Gopal Shewale created w &love; </p>
       </div>
     </footer>
   );
