@@ -27,7 +27,7 @@ export const Footer = () => {
           <SocialYoutube />
           <SocialPin />
         </div>
-        <p>&copy; 2025 @ Gopal Shewale created w &love; </p>
+        <p>&copy; 2025 @ Elevate ,Inc. All rights reserved </p>
       </div>
     </footer>
   );
