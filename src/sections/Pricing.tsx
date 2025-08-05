@@ -57,7 +57,7 @@ const pricingTiers = [
 export const Pricing = () => {
   return (
     <>
-    <section className="py-24">
+    <section className="py-24 bg-white ">
       <div className="container" >
         <div className="section-heading">
         <h2 className="section-title">Pricing</h2>
@@ -77,7 +77,7 @@ export const Pricing = () => {
               inverse,
               features
             }) => (
-              <div className={twMerge("p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA] mx-w-xs w-full  " , inverse===true && ' border-black bg-black text-white ' )} >
+              <div className={twMerge("card" , inverse===true && ' border-black bg-black text-white ' )} >
                 <div className="flex justify-between" >
                 <h3 className={twMerge("text-lg font-bold text-black/50 ",inverse===true && 'text-white/50')} >{title}</h3>
                 {/* this popular tag will only be for that one pricing section thats actually populr */}

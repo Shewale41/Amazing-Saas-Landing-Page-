@@ -7,6 +7,7 @@ import avatar6 from "@/assets/avatar-6.png";
 import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -65,6 +66,40 @@ const testimonials = [
   },
 ];
 
+// yeh itna jaruri nahi hai nahi toh baki cases mein aram se grid cols lagake , md ke alag ,lg ke liye alag aise kr sakte hai
+const firstColumn = testimonials.slice(0,3);
+const secondColumn = testimonials.slice(3,6);
+const thirdColum = testimonials.slice(6,9);
+
 export const Testimonials = () => {
-  return null;
+  return (<> <section className="bg-white">
+            <div className="container">
+              <div className="flex justify-center" > <div className="tag">Testimonails</div> </div>
+              <h2 className="section-title mt-10 " >
+                What our product users say.
+              </h2>
+              <p className="section-description mt-10 " >
+                From intiuitive design to powerful features , our app has become an essentail
+                tool for our users around the world.
+              </p>
+              <div className="flex flex-col gap-6">
+                { firstColumn.map(({ text , imageSrc , name , username }) => (
+                  <div className="card">
+                    <div>
+                      {text}
+                    </div>
+                    <div className="h-10 w-10 rounded-full">
+                      <Image src={imageSrc} alt={name} height={40} width={40} 
+                      className="h-10 w-10 rounded-full"/>
+                    </div>
+                    <div className="flex flex-col " >
+                      <div className="font-bold tracking-tight leading-5">{name}</div>
+                      <div className="tracking-tight leading-5">{username}</div>  
+                    </div>  
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+         </>);
 };
