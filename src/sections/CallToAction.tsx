@@ -6,6 +6,7 @@ import Image from "next/image";
 
 //the section heading has the relative position 
 //so if someone wants to adjust the spring and star they can easily w their prefered absolute values
+//the negative values works just opposite as normal ones 
 export const CallToAction = () => {
   return (
          <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-cip ">
