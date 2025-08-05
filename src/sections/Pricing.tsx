@@ -1,5 +1,7 @@
+"use client";
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge"; //w this tailwind merge we can the take the second value of a css when there exists a same property in the className Section
+import {motion} from "framer-motion";
 
 //sample data for pricing component
 const pricingTiers = [
@@ -83,7 +85,17 @@ export const Pricing = () => {
                 {/* this popular tag will only be for that one pricing section thats actually populr */}
                 {/* //in this span tag we will our rainbow effect ma-ma-magic starting and ending on the same color and in-between 4 colours */}
                 { popular===true && ( <div className=" inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20 ">
-                 <span className=" bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text "> popular </span>
+                 <motion.span 
+                  animate={{
+                    backgroundPositionX : "-100%",
+                  }}
+                  transition={{
+                    duration:1,
+                    repeat:Infinity,
+                    repeatType:"loop",
+                    ease:"linear",
+                  }}
+                  className=" bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text "> popular </motion.span>
                 </div> ) }
                 
                 </div>
