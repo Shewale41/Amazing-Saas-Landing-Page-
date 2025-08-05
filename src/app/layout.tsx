@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en" className="relative">
       <body className={clsx(dmSans.className, "antialiased bg-[#EAEEFE]")}>
         {children}
+        <Analytics/>
       </body>
     </html>
   );
