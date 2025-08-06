@@ -1,9 +1,3 @@
-Thanks for sharing the folder structure screenshot and live demo link! Here’s the **updated `README.md`** content with:
-
-* ✨ Added **Framer Motion usage**
-* 🌐 Your **live demo link**
-* 📁 **Folder structure** section (based on your screenshot)
-* ♻️ Note on **reusable CSS classes** via `global.css`
 
 ---
 
@@ -45,25 +39,25 @@ Thanks for sharing the folder structure screenshot and live demo link! Here’s 
 
 Here’s a quick overview of the project structure:
 
-```
+
 
 saas-landing-page/
 ├── public/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css   # Global Tailwind + reusable component styles
+│   │   ├── globals.css         # Global Tailwind + reusable component styles
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
-│   ├── assets/           # All images, logos, SVGs
-│   ├── components/       # Common shared UI (optional)
-│   ├── sections/         # Individual sections (Hero, Footer, ProductShowcase, etc.)
+│   ├── assets/                 # All images, logos, SVGs
+│   ├── components/             # Common shared UI (optional)
+│   ├── sections/               # Individual sections (Hero, Footer, ProductShowcase, etc.)
 │   │   ├── Header.tsx
 │   │   ├── Hero.tsx
 │   │   ├── Footer.tsx
 │   │   ├── Testimonials.tsx
 │   │   ├── ProductShowcase.tsx
 
-````
+
 
 ---
 
@@ -117,10 +111,7 @@ I’m constantly improving this project. If you have ideas or want to share thou
 
 ---
 
-> Made with ❤️ by Gopal Shewale
+> Created by Gopal Shewale
 
 ```
-
----
-
 ```
