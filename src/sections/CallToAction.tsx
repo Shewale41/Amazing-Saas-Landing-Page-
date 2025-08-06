@@ -1,15 +1,27 @@
+"use client";
 import ArrowRight from "@/assets/arrow-right.svg";
 import starImage from "@/assets/star.png";
 import springImage from "@/assets/spring.png";
 import Image from "next/image";
+import { motion , useScroll , useTransform } from "framer-motion";
+import {useRef} from "react";
 
 
 //the section heading has the relative position 
 //so if someone wants to adjust the spring and star they can easily w their prefered absolute values
 //the negative values works just opposite as normal ones 
 export const CallToAction = () => {
+    const sectionRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+      target:sectionRef,
+      offset: ["start end","end start"],
+    })
+    
+    const translateY = useTransform(scrollYProgress,[0,1],[150,-150]);
+
   return (
-         <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-cip ">
+         <section ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-cip ">
           <div className="container" >
             <div className="section-heading relative">
             <h2 className="section-title">Sign up for free today</h2>
@@ -17,10 +29,16 @@ export const CallToAction = () => {
               Celebrate karo the joy of accmplistments witha an app designed to track your progress and 
               motivate your efforts.
             </p>
-            <Image src={starImage} alt='star Image' width={360}
-             className="absolute -left-[350px] -top-[137px] "/>
-            <Image src={springImage} alt="spring Image" width={360}
-             className="absolute -right-[331px] -top-[19px] " />
+            <motion.img src={starImage.src} alt='star Image' width={360}
+             className="absolute -left-[350px] -top-[137px] "
+             style={{
+              translateY,
+             }} />
+            <motion.img src={springImage.src} alt="spring Image" width={360}
+             className="absolute -right-[331px] -top-[19px] " 
+             style={{
+              translateY,
+             }} />
             </div>
             <div className="flex justify-center mt-10 gap-2.5 ">
               <button className="btn btn-primary">Get for free</button>
