@@ -1,3 +1,4 @@
+"use client"
 import avatar1 from "@/assets/avatar-1.png";
 import avatar2 from "@/assets/avatar-2.png";
 import avatar3 from "@/assets/avatar-3.png";
@@ -9,6 +10,8 @@ import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
+import React from "react";
 
 
 const testimonials = [
@@ -69,55 +72,74 @@ const testimonials = [
 ];
 
 // yeh itna jaruri nahi hai nahi toh baki cases mein aram se grid cols lagake , md ke alag ,lg ke liye alag aise kr sakte hai
-const firstColumn = testimonials.slice(0,3);
-const secondColumn = testimonials.slice(3,6);
-const thirdColumn = testimonials.slice(6,9);
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 
 //this is a re-usable components so we dont have to write a ton of same code over n over
-const TestimonialColumn = (props : { className?:string; 
-                                     testimonials: typeof testimonials;
-                                     } )=>(
-  <div className={twMerge("flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]",props.className)}>
-                { props.testimonials.map(({ text , imageSrc , name , username }) => (
-                  <div className="card">
-                    <div>
-                      {text}
-                    </div>
-                    <div className="h-10 w-10 rounded-full">
-                      <Image src={imageSrc} alt={name} height={40} width={40} 
-                      className="h-10 w-10 rounded-full"/>
-                    </div>
-                    <div className="flex flex-col " >
-                      <div className="font-bold tracking-tight leading-5">{name}</div>
-                      <div className="tracking-tight leading-5">{username}</div>  
-                    </div>  
-                  </div> 
-                ))}
+const TestimonialColumn = (props: {
+  className?: string;
+  testimonials: typeof testimonials;
+  duration?:number
+}) => (
+  <div className={props.className}>
+    <motion.div 
+    animate={{
+      translateY:"-50%",
+    }}
+    transition={{
+      duration:props.duration || 10,
+      repeat:Infinity,
+      repeatType:"loop",
+      ease:"linear"
+    }}
+    className="flex flex-col gap-6 pb-6 ">
+      {[...Array(2)].fill(0).map((_, index) => (
+        <React.Fragment key={index}>
+          {props.testimonials.map(({ text, imageSrc, name, username }) => (
+            <div className="card">
+              <div>
+                {text}
               </div>
+              <div className="h-10 w-10 rounded-full">
+                <Image src={imageSrc} alt={name} height={40} width={40}
+                  className="h-10 w-10 rounded-full" />
+              </div>
+              <div className="flex flex-col " >
+                <div className="font-bold tracking-tight leading-5">{name}</div>
+                <div className="tracking-tight leading-5">{username}</div>
+              </div>
+            </div>
+          ))}
+        </React.Fragment>
+      ))}
+
+    </motion.div>
+  </div>
 )
 
 //mask image is used to make the light or transparent effect at the top and bottom
 
 export const Testimonials = () => {
   return (<> <section className="bg-white">
-            <div className="container">
-              <div className=" section-heading ">
-              <div className="flex justify-center" > <div className="tag">Testimonails</div> </div>
-              <h2 className="section-title mt-10 " >
-                What our product users say.
-              </h2>
-              <p className="section-description mt-10 " >
-                From intiuitive design to powerful features , our app has become an essentail
-                tool for our users around the world.
-              </p>
-             </div>
-              <div className="flex justify-center gap-6 ">
-              <TestimonialColumn testimonials={firstColumn}/>
-              <TestimonialColumn testimonials={secondColumn} className="hidden md:flex"/>
-              <TestimonialColumn testimonials={thirdColumn} className="hidden lg:flex" />              
-             </div> 
-            </div>
-          </section>
-         </>);
+    <div className="container">
+      <div className=" section-heading ">
+        <div className="flex justify-center" > <div className="tag">Testimonails</div> </div>
+        <h2 className="section-title mt-10 " >
+          What our product users say.
+        </h2>
+        <p className="section-description  " >
+          From intiuitive design to powerful features , our app has become an essentail
+          tool for our users around the world.
+        </p>
+      </div>
+      <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden ">
+        <TestimonialColumn testimonials={firstColumn} duration={15} />
+        <TestimonialColumn testimonials={secondColumn} className="hidden md:block" duration={19}  />
+        <TestimonialColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+      </div>
+    </div>
+  </section>
+  </>);
 };
