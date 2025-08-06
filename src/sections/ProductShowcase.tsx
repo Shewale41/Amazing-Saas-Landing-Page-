@@ -26,7 +26,7 @@ export const ProductShowcase = () => {
         Boost your productivity
       </div>
       </div>
-      <h2 className="section-title mt-5 ">A more effective way to track progress</h2>
+      <h2 className="section-title mt-5 text-transparent ">A more effective way to track progress</h2>
       <p className="section-description mt-5 ">
         Effortlessly turn your ideas into fully functional,responsive,SaaS 
         website in just minutes with this template. 

@@ -35,7 +35,7 @@ export const Hero = () => {
               {/* //making gradient text */}
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6 ">PathWay To productivity</h1>
               <p className="text-xl text-[#010D3E] tracking-tight mt-6 ">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis temporibus alias tempore consequatur commodi corporis   voluptatibus dignissimos perspiciatis nisi.
+              Take control of your tasks and unlock your full potential. Our platform simplifies your workflow so you can focus on what really matters—getting things done with ease and confidence.
               </p>
               <div className="flex items-center mt-[30px] gap-1 ">
                 <button className="btn btn-primary ">Get Started for Free</button>
@@ -59,7 +59,7 @@ export const Hero = () => {
               }}
               /> 
               <motion.img src={cylinderImage.src} height={220} width={220} alt="cylinder Image" 
-              className="hidden md:block -top-8 -left-32 md:absolute "
+              className="hidden md:block -top-20 -left-32 md:absolute "
               style={{
                 translateY: translateY,
               }}

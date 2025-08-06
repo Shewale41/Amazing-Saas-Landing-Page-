@@ -126,7 +126,7 @@ export const Testimonials = () => {
     <div className="container">
       <div className=" section-heading ">
         <div className="flex justify-center" > <div className="tag">Testimonails</div> </div>
-        <h2 className="section-title mt-10 " >
+        <h2 className="section-title text-transparent mt-10 " >
           What our product users say.
         </h2>
         <p className="section-description  " >

@@ -26,7 +26,7 @@ export const CallToAction = () => {
             <div className="section-heading relative">
             <h2 className="section-title">Sign up for free today</h2>
             <p className="section-description mt-5 ">
-              Celebrate karo the joy of accmplistments witha an app designed to track your progress and 
+              Celebrate the joy of accomplistments with an app designed to track your progress and 
               motivate your efforts.
             </p>
             <motion.img src={starImage.src} alt='star Image' width={360}
